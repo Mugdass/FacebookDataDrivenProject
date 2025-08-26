@@ -25,7 +25,7 @@ FacebookDataDrivenProject/
 │     ├─ CreateNewAccountPageTest.java
 │     └─ RunCucumberTest.java
 └─ driver/              # (optional) local drivers
-```
+
 
 
 
@@ -47,7 +47,7 @@ reports/
 └── allure-report/            (generated HTML report after running `allure serve` or `allure generate`)
     ├── index.html
     └── static/
-
+```
 
 ## ▶️ Run
 ```bash
