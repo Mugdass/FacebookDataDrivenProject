@@ -1,57 +1,58 @@
-# Facebook Data-Driven Test Automation Framework
+# 📌 Facebook Data-Driven Automation Project  
 
-**Java + Selenium + Cucumber (BDD) + TestNG + Apache POI (Excel)**
-using the **Page Object Model (POM)**. Includes a sample Cucumber feature,
-Excel-driven data, and a GitHub Actions CI workflow.
+This project is a **Data-Driven Test Automation Framework** built using **Java, Selenium, TestNG, Cucumber (BDD), and Apache POI (Excel)**.  
+It follows the **Page Object Model (POM)** design pattern and demonstrates how test data can be maintained in **Excel sheets** and consumed in automated UI tests.  
 
-## 📂 Structure
+---
+
+## 🚀 Features
+- Page Object Model (POM) design for reusable and maintainable code  
+- Data-Driven testing with **Apache POI** (Excel integration)  
+- Cucumber **Gherkin feature files** for BDD scenarios  
+- TestNG integration for parallel and structured test execution  
+- Centralized **DriverFactory** for browser setup  
+- **Maven** for build and dependency management  
+- **GitHub Actions CI/CD** pipeline with test reporting  
+- Extensible for **Allure Reports**  
+
+---
+
+## 📂 Project Structure
+
+
 ```
+
 FacebookDataDrivenProject/
-├─ pom.xml
-├─ README.md
-├─ .gitignore
-├─ .github/workflows/maven.yml
-├─ data/                # Excel data (users.xlsx)
-├─ Features/            # Cucumber feature files
-├─ src/
-│  ├─ main/java/fb/
-│  │  ├─ model/
-│  │  ├─ page/
-│  │  └─ lib/
-│  └─ test/java/fb/
-│     ├─ stepdefinitions/
-│     ├─ BaseTest.java
-│     ├─ HomePageTest.java
-│     ├─ CreateNewAccountPageTest.java
-│     └─ RunCucumberTest.java
-└─ driver/              # (optional) local drivers
-
-
-
-
-📂 reports/ (local only)
-
-  When you run mvn test, Maven + TestNG + Cucumber generate results here:
-
-reports/
-│── test-output/              (TestNG default HTML reports)
-│   ├── index.html
-│   ├── emailable-report.html
-│   └── other files...
+│── pom.xml # Maven dependencies
+│── README.md # Project documentation
+│── .gitignore # Ignored files
+│── .github/workflows/ # GitHub Actions CI/CD
+│ └── maven.yml
 │
-│── allure-results/           (raw Allure report files in JSON/XML)
-│   ├── *.xml
-│   ├── *.json
-│   └── categories.json
+├── data/
+│ └── users.xlsx # Excel test data
 │
-└── allure-report/            (generated HTML report after running `allure serve` or `allure generate`)
-    ├── index.html
-    └── static/
+├── drivers/ # (Optional) Local WebDriver executables
+│ ├── chromedriver.exe
+│ └── geckodriver.exe
+│
+├── src/
+│ ├── main/java/
+│ │ ├── pages/ # Page Object classes
+│ │ └── utils/ # ExcelReader, DriverFactory, Helpers
+│ │
+│ └── test/java/
+│ ├── features/ # Cucumber .feature files
+│ ├── stepdefs/ # Step Definitions
+│ └── runners/ # TestNG-Cucumber Runner
+│
+└── reports/ (generated after tests)
+├── test-output/ # TestNG HTML reports
+├── allure-results/ # Raw Allure results
+└── allure-report/ # Allure HTML report
+
 ```
 
-## ▶️ Run
-```bash
-mvn clean test
-# Or run only Cucumber:
-mvn -Dcucumber.filter.tags=@smoke test
-```
+
+
+
