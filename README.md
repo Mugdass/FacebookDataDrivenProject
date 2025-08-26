@@ -27,6 +27,28 @@ FacebookDataDrivenProject/
 └─ driver/              # (optional) local drivers
 ```
 
+
+
+📂 reports/ (local only)
+
+  When you run mvn test, Maven + TestNG + Cucumber generate results here:
+
+reports/
+│── test-output/              (TestNG default HTML reports)
+│   ├── index.html
+│   ├── emailable-report.html
+│   └── other files...
+│
+│── allure-results/           (raw Allure report files in JSON/XML)
+│   ├── *.xml
+│   ├── *.json
+│   └── categories.json
+│
+└── allure-report/            (generated HTML report after running `allure serve` or `allure generate`)
+    ├── index.html
+    └── static/
+
+
 ## ▶️ Run
 ```bash
 mvn clean test
