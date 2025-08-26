@@ -56,3 +56,47 @@ FacebookDataDrivenProject/
 
 
 
+
+---
+
+## ⚙️ Tech Stack
+- **Java 17**  
+- **Selenium WebDriver**  
+- **TestNG**  
+- **Cucumber (BDD with Gherkin)**  
+- **Apache POI (Excel integration)**  
+- **Maven**  
+- **Allure Reporting** (optional)  
+- **GitHub Actions CI/CD**  
+
+---
+
+
+## ▶️ How to Run Tests
+
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mugdass/FacebookDataDrivenProject.git
+   cd FacebookDataDrivenProject
+```
+
+2. Run tests with Maven:
+```
+     mvn clean test
+   ```
+
+4. Generate Allure report (optional):
+```
+    allure generate allure-results --clean -o allure-report
+    allure serve allure-results
+
+```
+
+
+
+📊 Reports
+
+TestNG HTML Report → reports/test-output/emailable-report.html
+
+Allure Report → Open reports/allure-report/index.html
