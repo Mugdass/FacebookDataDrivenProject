@@ -79,24 +79,27 @@ FacebookDataDrivenProject/
    ```bash
    git clone https://github.com/Mugdass/FacebookDataDrivenProject.git
    cd FacebookDataDrivenProject
-```
+
 
 2. Run tests with Maven:
 ```
      mvn clean test
-   ```
+   
 
 4. Generate Allure report (optional):
 ```
     allure generate allure-results --clean -o allure-report
     allure serve allure-results
 
-```
+
+---
 
 
+## 📊 Reports
 
-📊 Reports
+   TestNG HTML Report → reports/test-output/emailable-report.html
 
-TestNG HTML Report → reports/test-output/emailable-report.html
+   Allure Report → Open reports/allure-report/index.html
 
-Allure Report → Open reports/allure-report/index.html
+
+---
