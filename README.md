@@ -82,12 +82,12 @@ FacebookDataDrivenProject/
 
 
 2. Run tests with Maven:
-```
-     mvn clean test
+   ```bash
+   mvn clean test
    
 
 4. Generate Allure report (optional):
-```
+   ```bash
     allure generate allure-results --clean -o allure-report
     allure serve allure-results
 
